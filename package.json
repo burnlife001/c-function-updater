@@ -1,0 +1,61 @@
+{
+  "name": "c-function-updater",
+  "displayName": "C Function Updater",
+  "description": "A VSCode extension for managing C function declarations",
+  "version": "1.0.0",
+  "publisher": "your-name",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/c-function-updater.git"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:c2h.updateFunctions",
+    "onCommand:c2c.updateStatic"
+  ],
+  "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "c2h.updateFunctions",
+                "title": "C2H: Update Functions"
+            },
+            {
+                "command": "c2c.updateStatic",
+                "title": "C2C: Update Static Functions"
+            }
+        ],
+        "configuration": {
+            "title": "C2CDiv1",
+            "properties": {
+                "c2c.declarationSeparatorBefore": {
+                    "type": "string",
+                    "default": "// *****************************************",
+                    "description": "前置分隔符用于静态函数声明前"
+                },
+                "c2c.declarationSeparatorAfter": {
+                    "type": "string",
+                    "default": "// *****************************************",
+                    "description": "后置分隔符用于静态函数声明后"
+                }
+            }
+        },
+        "keybindings": [
+            {
+                "command": "c2h.updateFunctions",
+                "key": "alt+f1",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "c2c.updateStatic",
+                "key": "alt+f2",
+                "when": "editorTextFocus"
+            }
+        ]
+    }
+}
