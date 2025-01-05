@@ -1,12 +1,12 @@
 {
   "name": "c-function-updater",
-  "displayName": "C Function Updater",
+  "displayName": "c-function-updater",
   "description": "A VSCode extension for managing C function declarations",
   "version": "1.0.0",
-  "publisher": "your-name",
+  "publisher": "Beyond2025",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/c-function-updater.git"
+    "url": "https://github.com/burnlife001/c-function-updater"
   },
   "engines": {
     "vscode": "^1.75.0"
