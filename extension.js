@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 // 改进后的正则表达式模式
-const GLOBAL_FUNC_PATTERN = /^(?!\s*static\s)([\w\s\*]+)\s+(\w+)\s*\(([^\)]*)\)\s*\{/gm;
+const GLOBAL_FUNC_PATTERN = /^(?!\s*static\s)(?!\s*(?:if|while|switch)\s*)(?!.*\bmain\s*\()(void|int|char|float|double|long|short|unsigned|signed|bool|[\w\s\*]+)\s+(\w+)\s*\(([^\)]*)\)\s*\{(?![^{]*;)/gm;
 const STATIC_FUNC_PATTERN = /^\s*static\s+([\w\s\*]+)\s+(\w+)\s*\(([^\)]*)\)\s*\{/gm;
 
 // 检查是否为静态函数

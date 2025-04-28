@@ -2,7 +2,7 @@
   "name": "c-function-updater",
   "displayName": "c-function-updater",
   "description": "A VSCode extension for managing C function declarations",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "Beyond2025",
   "repository": {
     "type": "git",
